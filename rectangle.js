@@ -1,4 +1,4 @@
-/*global $forkMeGH,$bszPageFooter*/
+/*global $forkMeGH,$bszPageFooter,rectangle*/
 /*eslint no-undef: "error"*/
 function i(e, t) {
   return Math.round(e * Math.pow(10, t)) / Math.pow(10, t);
@@ -15,6 +15,7 @@ $(function() {
   $bszPageFooter.show($('#times'));
 
   $btnCal.click(function(){
+    /*
     var w = Number($width.val()),
         h = Number($height.val());
 
@@ -23,5 +24,9 @@ $(function() {
 
     $perimeter.val(p);
     $area.val(a);
+    */
+    var rect = rectangle();
+    $perimeter.val(i(rect.perimeter($width.val(), $height.val()),2));
+    $area.val(i(rect.area($width.val(), $height.val()),2)); 
   });
 });

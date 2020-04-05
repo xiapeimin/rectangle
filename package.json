@@ -4,14 +4,19 @@
   "description": "矩形计算器",
   "main": "rectangle.js",
   "dependencies": {
-    "grunt": "^1.1.0",
     "grunt-contrib-csslint": "^2.0.0",
     "grunt-eslint": "^22.0.0",
     "grunt-htmlhint": "^0.9.13"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "grunt": "^1.1.0",
+    "grunt-contrib-htmlmin": "^3.1.0",
+    "grunt-mocha": "^1.2.0",
+    "mocha": "^7.1.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": 'grunt lint && grunt unitTest'
   },
   "repository": {
     "type": "git",
